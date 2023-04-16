@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-@st.cache
+@st.cache_data
 def get_data():
     pipeline = joblib.load('titanic_pipeline_RF.joblib')
     return pipeline
